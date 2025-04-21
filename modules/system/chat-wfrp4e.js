@@ -55,6 +55,10 @@ export default class ChatWFRP {
    * @param html {HTML}  Chat log html
    */
   static async chatListeners(html) {
+    // not a great fix, but works
+    // ideally system would define its own ChatMessage or ChatLog and use Actions and EventListeners
+    html = $(html);
+
     // item lookup tag looks for an item based on the location attribute (compendium), then posts that item to chat.
 
     // Lookp function uses specialized skill and talent lookup functions that improve searches based on specializations
